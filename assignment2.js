@@ -6,7 +6,7 @@ const rl = readline.createInterface({
 });
 
 
-rl.question('Please enter a decimal number, that you would like to convert: ', (answer) => {
+rl.question('Please enter a decimal number, that you would like to convert: ', (userInput) => {
     //here is my solution of convering from decimal to binary using a function convertToBinary
     //here I followed the same structure as in the Algoritmn I presented in the first assignment 
     const convertToBinary = (decimalNum) => {
@@ -20,13 +20,13 @@ rl.question('Please enter a decimal number, that you would like to convert: ', (
         return binaryNum;
     }
     console.log(`1st convertor: `);
-    console.log(`The number ${answer} is ${convertToBinary(answer)} in binary.`);
+    console.log(`The number ${userInput} is ${convertToBinary(userInput)} in binary.`);
     console.log(`2nd convertor: `);
 
-    //here I achived the same results with much shorter code 
-    //it tranfers the number from decimal to different bases
+    //here I achieved the same results with much shorter code 
+    //it transfers the number from decimal to different bases
 
-    const input = Number(answer);
+    const input = Number(userInput);
     console.log(`The number ${input} is already a decimal number.`)
     console.log(`The number ${input} is represented as ${input.toString(2)} in binary.`)//does the same as the very first code (decimal => binary)
     console.log(`The number ${input} is represented as ${input.toString(8)} in octal.`)
